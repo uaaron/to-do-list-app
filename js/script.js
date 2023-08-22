@@ -11,4 +11,35 @@ function newItem(){
         $('#list').append(li);
     }
 
-    
+    //crossing out item from list of items
+    function crossOut() {
+        li.toggleClass('strike')
+    }
+
+    li.on('dblclick', crossOut);
+
+
+
+    // add delete button
+
+
+
+     /* 
+     Original code before looking at the solution
+
+     crossOutButton selector in CSS was changed to #crossOutButton
+
+     let crossOutButton = $('<button id=crossOutButton>X</button>');
+     li.append(crossOutButton);
+     */
+
+
+
+    let crossOutButton = $('<crossOutButton></crossOutButton>');
+    crossOutButton.append(document.createTextNode('X'));
+    li.append(crossOutButton);
+
+    crossOutButton.on('click', deleteListItem);
+
+
+}
