@@ -46,5 +46,6 @@ function newItem(){
         li.addClass('delete');
     }
 
-
+    // reorder list items
+    $('#list').sortable();
 }
